@@ -9,7 +9,7 @@ body{
 }
 
 .vip-page-container{
-	$conWidth: 980px;
+	$conWidth: 1000px;
 	$primaryColor: #212121;
 	color: #FFF;
 	min-width: $conWidth;
@@ -103,7 +103,8 @@ body{
 		background-repeat: no-repeat;
 		background-position: bottom center;
 		background-size: contain;
-		padding: 30px 0px;
+		padding: 35px 0px;
+		z-index: 1;
 		&:before{
 			content: " ";
 			position: absolute;
@@ -117,6 +118,132 @@ body{
 			background-size: contain;
 			top: 0px;
 			left: 0px;
+			z-index: 1;
+		}
+	}
+	.details-section{
+		display: none;
+		@include clearfloat;
+		position: relative;
+		z-index: 2;
+		.main{
+			float: left;
+			width: 650px;
+			.prodName{
+				min-height: 100px;
+				padding: 20px;
+				line-height: 1.3em;
+				margin: 0px 0px 30px;
+				font-size: 22px;
+				font-weight: bold;
+				font-family: $fontDefault;
+				// background-color: #181818;
+				background-image: url('../images/bg_overlay_side.png');
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+			}
+			.gallery{
+				@include clearfloat;
+				.thumbs{
+					float: left;
+				}
+				.main-img{
+					float: right;
+					width: 500px;
+					overflow-x: hidden;
+					margin-right: 30px;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				.eachThumb{
+					display: block;
+					margin: 1px 1px 9px;
+					width: 50px;
+					height: 50px;
+					background-color: #FFF;
+					overflow: hidden;
+					&:hover, &.active{
+						border: 1px solid red;
+						margin: -1px 0px 8px;
+						&:first-child{
+							margin: 0px 0px 8px;
+						}
+					}
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		.side{
+			float: right;
+			width: $conWidth - 650px - 21px;
+			.price-box{
+				background-image: url('../images/bg_overlay_side.png');
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+				padding: 30px;
+				margin-bottom: 3px;
+				p{
+					margin: 0px;
+					display: block;
+				}
+				.price{
+					font-size: 60px;
+					color: #d02831;
+					font-family: $fontDefault;
+					font-weight: bold;
+					line-height: 1em;
+					margin-bottom: 20px;
+					sup{
+						top: -0.25em;
+					}
+				}
+				.lprice{
+					font-size: 18px;
+					font-family: $fontDefault;
+					font-weight: bold;
+					span{
+						text-decoration: line-through;
+					}
+				}
+				.disc{
+					font-size: 18px;
+					font-family: $fontDefault;
+					font-weight: bold;
+					margin-bottom: 20px;
+					span{
+						color: #d02831;
+					}
+				}
+				.avail{
+					font-size: 20px;
+					font-family: $fontDefault;
+					font-weight: normal;
+				}
+			}
+			.call-info{
+				background-color: #d02831;
+				background-image: url("../images/call_ico.png");
+				background-repeat: no-repeat;
+				background-position: top left;
+				background-size: contain;
+				font-size: 17px;
+				font-family: $fontDefault;
+				font-weight: bold;
+				padding: 25px 15px 25px 75px;
+				text-transform: uppercase;
+			}
+			.notes{
+				font-size: 18px;
+				font-family: $fontDefault;
+				line-height: 1.5em;
+			}
 		}
 	}
 }

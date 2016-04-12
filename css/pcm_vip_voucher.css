@@ -421,7 +421,7 @@ body {
 
 .vip-page-container {
   color: #FFF;
-  min-width: 980px;
+  min-width: 1000px;
   margin: 0px;
   position: relative;
   background-color: #212121;
@@ -438,7 +438,7 @@ body {
   z-index: 99;
 }
 .vip-page-container .container {
-  width: 960px;
+  width: 980px;
   padding: 0 10px;
   margin: 0px auto;
 }
@@ -512,7 +512,8 @@ body {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  padding: 30px 0px;
+  padding: 35px 0px;
+  z-index: 1;
 }
 .vip-page-container .main-content:before {
   content: " ";
@@ -527,6 +528,137 @@ body {
   background-size: contain;
   top: 0px;
   left: 0px;
+  z-index: 1;
+}
+.vip-page-container .details-section {
+  display: none;
+  position: relative;
+  z-index: 2;
+}
+.vip-page-container .details-section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.vip-page-container .details-section .main {
+  float: left;
+  width: 650px;
+}
+.vip-page-container .details-section .main .prodName {
+  min-height: 100px;
+  padding: 20px;
+  line-height: 1.3em;
+  margin: 0px 0px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-image: url("../images/bg_overlay_side.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.vip-page-container .details-section .main .gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.vip-page-container .details-section .main .gallery .thumbs {
+  float: left;
+}
+.vip-page-container .details-section .main .gallery .main-img {
+  float: right;
+  width: 500px;
+  overflow-x: hidden;
+  margin-right: 30px;
+}
+.vip-page-container .details-section .main .gallery .main-img img {
+  width: 100%;
+  height: auto;
+}
+.vip-page-container .details-section .main .gallery .eachThumb {
+  display: block;
+  margin: 1px 1px 9px;
+  width: 50px;
+  height: 50px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.vip-page-container .details-section .main .gallery .eachThumb:hover, .vip-page-container .details-section .main .gallery .eachThumb.active {
+  border: 1px solid red;
+  margin: -1px 0px 8px;
+}
+.vip-page-container .details-section .main .gallery .eachThumb:hover:first-child, .vip-page-container .details-section .main .gallery .eachThumb.active:first-child {
+  margin: 0px 0px 8px;
+}
+.vip-page-container .details-section .main .gallery .eachThumb img {
+  width: 100%;
+  height: auto;
+}
+.vip-page-container .details-section .side {
+  float: right;
+  width: 329px;
+}
+.vip-page-container .details-section .side .price-box {
+  background-image: url("../images/bg_overlay_side.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 3px;
+}
+.vip-page-container .details-section .side .price-box p {
+  margin: 0px;
+  display: block;
+}
+.vip-page-container .details-section .side .price-box .price {
+  font-size: 60px;
+  color: #d02831;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+.vip-page-container .details-section .side .price-box .price sup {
+  top: -0.25em;
+}
+.vip-page-container .details-section .side .price-box .lprice {
+  font-size: 18px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.vip-page-container .details-section .side .price-box .lprice span {
+  text-decoration: line-through;
+}
+.vip-page-container .details-section .side .price-box .disc {
+  font-size: 18px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.vip-page-container .details-section .side .price-box .disc span {
+  color: #d02831;
+}
+.vip-page-container .details-section .side .price-box .avail {
+  font-size: 20px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+.vip-page-container .details-section .side .call-info {
+  background-color: #d02831;
+  background-image: url("../images/call_ico.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  font-size: 17px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  padding: 25px 15px 25px 75px;
+  text-transform: uppercase;
+}
+.vip-page-container .details-section .side .notes {
+  font-size: 18px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
 }
 
 
