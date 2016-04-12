@@ -1,0 +1,61 @@
+@mixin reset-list(){
+    list-style-type: none;
+    margin: 0; padding: 0;
+}
+
+@mixin clearlist {
+    &, > li {
+        list-style: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        text-indent: 0px;
+    }
+}
+
+@mixin clearfloat{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        -ms-box-shadow:inset $top $left $blur $color;
+        -o-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        -ms-box-shadow: $top $left $blur $color;
+        -o-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin css3($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+@mixin iconize($code){
+    content: unquote("\"")+unquote(str-insert($code,"\\", 1))+unquote("\"");
+    font-family: $fontIcon;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

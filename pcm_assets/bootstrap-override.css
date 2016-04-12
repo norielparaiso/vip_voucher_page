@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Open-Sans-400.eot");
+  src: local("Open Sans"), local("Open Sans"), url("../fonts/Open-Sans-400.eot") format("embedded-opentype"), url("../fonts/Open-Sans-400.woff") format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Open-Sans-700.eot");
+  src: local("Open Sans"), local("Open Sans"), url("../fonts/Open-Sans-700.eot") format("embedded-opentype"), url("../fonts/Open-Sans-700.woff") format("woff"); }
+@media (min-width: 1200px) {
+  .container {
+    width: 980px; } }
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e9e9e9; }
+
+.container {
+  padding: 0; }
+
+.container-fluid {
+  padding: 0; }
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.clear-both {
+  clear: both; }
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+/*# sourceMappingURL=bootstrap-pdp.css.map */
