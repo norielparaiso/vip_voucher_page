@@ -37,6 +37,9 @@ PCM.vipVoucherScript = function() {
 				mainImg.attr("src", newSrc);
 			}
 		});
+		$('.eachThumb').hover(function(){
+			$(this).trigger('click');
+		});
 
 		// show first image:
 		$('.eachThumb').first().trigger('click');
