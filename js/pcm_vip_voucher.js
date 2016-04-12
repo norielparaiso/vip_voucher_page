@@ -221,9 +221,34 @@ PCM.vipVoucherScript = function() {
 		}
 	};
 
+	var _carousel = function(elem){
+		if ($(elem).length > 0) {
+			$(elem).owlCarousel({
+				items: 6,
+				singleItem: false,
+				slideSpeed: 200,
+				paginationSpeed: 800,
+				rewindSpeed: 1000,
+				autoPlay: true,
+				stopOnHover: false,
+				navigation: true,
+				navigationText: ["<", ">"],
+				scrollPerPage: false,
+				pagination: false,
+				paginationNumbers: false,
+				responsive: false,
+				responsiveRefreshRate: 200,
+				autoHeight: false,
+				mouseDrag: true,
+				touchDrag: true
+			});
+		}
+	};
+
 	return {
 		uiFix: _uiFix,
-		detailsPage: populateDetails
+		detailsPage: populateDetails,
+		carousel: _carousel
 	};
 }
 
@@ -238,6 +263,8 @@ $(function() {
 			listPrice:  ".details-section .lprice span",
 			discount:  ".details-section .disc span"
 		});
+
+		PCM.vipVoucherScript().carousel(".prod-slider .slider");
 
 		PCM.vipVoucherScript().uiFix();
 	});

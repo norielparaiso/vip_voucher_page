@@ -3,6 +3,7 @@
 @import "libs/normalize";
 @import "libs/globals";
 @import "libs/mixins";
+@import "libs/owl-carousel";
 
 body{
 	font-family: $fontDefault;
@@ -97,7 +98,7 @@ body{
 	}
 	.main-content{
 		background-color: $primaryColor;
-		min-height: 900px;
+		min-height: 850px;
 		position: relative;
 		background-image: url('../images/bg_overlay_bot.png');
 		background-repeat: no-repeat;
@@ -165,12 +166,9 @@ body{
 					height: 50px;
 					background-color: #FFF;
 					overflow: hidden;
+					border: 1px solid transparent;
 					&:hover, &.active{
 						border: 1px solid red;
-						margin: -1px 0px 8px;
-						&:first-child{
-							margin: 0px 0px 8px;
-						}
 					}
 					img{
 						width: 100%;
@@ -181,7 +179,7 @@ body{
 		}
 		.side{
 			float: right;
-			width: $conWidth - 650px - 21px;
+			width: $conWidth - 650px - 22px;
 			.price-box{
 				background-image: url('../images/bg_overlay_side.png');
 				background-repeat: no-repeat;
@@ -192,6 +190,9 @@ body{
 				p{
 					margin: 0px;
 					display: block;
+					sup{
+						top: -0.25em;
+					}
 				}
 				.price{
 					font-size: 60px;
@@ -200,9 +201,6 @@ body{
 					font-weight: bold;
 					line-height: 1em;
 					margin-bottom: 20px;
-					sup{
-						top: -0.25em;
-					}
 				}
 				.lprice{
 					font-size: 18px;
@@ -244,6 +242,148 @@ body{
 				font-family: $fontDefault;
 				line-height: 1.5em;
 			}
+		}
+	}
+	.prod-listing{
+		margin: 30px 0px 50px;
+		.each-row{
+			@include clearfloat;
+			border-bottom: 1px solid #1c1c1c;
+			&:last-child{
+				border-bottom: none;
+			}
+			.each-col{
+				float: left;
+				width: ($conWidth * 0.25) - 46px;
+				text-align: center;
+				border-right: 1px solid #1c1c1c;
+				padding: 10px 20px 0px;
+				margin: 15px 0px;
+				&:last-child{
+					float: right;
+					border-right: none;
+				}
+				.prodName{
+					font-size: 12px;
+					font-family: $fontDefault;
+					font-weight: bold;
+				}
+				.prodImg{
+					width: 175px;
+					height: 175px;
+					@include css3(border-radius, 100px);
+					border: 10px solid #272727;
+					overflow: hidden;
+					margin-bottom: 15px;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				.pricing{
+					sup{
+						top: -0.25em;
+					}
+					.save{
+						margin-top: 0px;
+						font-size: 12px;
+						font-family: $fontDefault;
+						font-weight: bold;
+						margin-bottom: 10px;
+						line-height: 1em;
+						span{
+							color: #d02831;
+						}
+					}
+					.price{
+						line-height: 1em;
+						font-size: 32px;
+						font-family: $fontDefault;
+						font-weight: bold;
+						color: #d02831;
+						margin-bottom: 20px;
+						margin-top: 0px;
+						position: relative;
+						sup{
+							font-size: 0.5em;
+							top: -0.3em;
+							line-height: 32px;
+							vertical-align: top;
+						}
+					}
+					.partNo{
+						line-height: 1em;
+						margin: 0px;
+						font-size: 10px;
+						font-family: $fontDefault;
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+	.footnote{
+		padding-bottom: 30px;
+		p{
+			color: #FFF;
+			font-size: 18px;
+			font-family: $fontDefault;
+			font-weight: normal;
+			margin-bottom: 30px;
+			line-height: 1.3em;
+			text-shadow: 1px 2px 5px #000;
+			&.sign{
+				font-weight: bold;
+				font-size: 30px;
+			}
+		}
+	}
+	.prod-slider{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		h2{
+			font-size: 24px;
+			font-family: $fontDefault;
+			font-weight: normal;
+			margin: 0px;
+			margin-bottom: 30px;
+		}
+		.prodImg{
+			@include css3(border-radius, 100px);
+			border: 10px solid #272727;
+			overflow: hidden;
+			margin: 0px auto;
+			text-align: center;
+			width: 120px;
+			height: 120px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons .owl-prev{
+			background-image: url('../images/arr_left.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			opacity: 1;
+			left: -45px;
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons .owl-next{
+			background-image: url('../images/arr_right.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			opacity: 1;
+			right: -45px;
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons{
+			top: 30%;
+			padding: 0px 0px;
 		}
 	}
 }

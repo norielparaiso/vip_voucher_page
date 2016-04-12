@@ -12,6 +12,7 @@
 
 	<!-- add these required resources -->
 	<link rel="stylesheet" href="css/pcm_vip_voucher.css">
+	<script src="js/owl.carousel.v1.3.2.js"></script>
 	<script src="js/pcm_vip_voucher.js"></script>
 </head>
 <body>
@@ -32,10 +33,7 @@
 				} ?>
 			</div>
 		</div>
-		<?php if(!isset($_GET['sku'])){ ?>
-		<!-- landing page slider -->
-		SLIDER
-		<?php } ?>
+		<?php if(!isset($_GET['sku'])){ include 'landing_slider.php'; } ?>
 	</div>
 	<!-- End tooltwist export -->
 </body>
