@@ -1,0 +1,389 @@
+@import "compass";
+@import "libs/fonts";
+@import "libs/normalize";
+@import "libs/globals";
+@import "libs/mixins";
+@import "libs/owl-carousel";
+
+body{
+	font-family: $fontDefault;
+}
+
+.vip-page-container{
+	$conWidth: 1000px;
+	$primaryColor: #212121;
+	color: #FFF;
+	min-width: $conWidth;
+	margin: 0px;
+	position: relative;
+	background-color: $primaryColor;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	&:after{
+		content: " ";
+		position: absolute;
+		display: block;
+		bottom: -10px;
+		width: 100%;
+		border-bottom: 10px solid #ff6a72;
+		z-index: 99;
+	}
+	.container{
+		width: $conWidth - 20px;
+		padding: 0 10px;
+		margin: 0px auto;
+	}
+	.banner{
+		$bannerHeight: 400px;
+		min-height: $bannerHeight;
+		background-image: url('../images/banner.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding-top: 40px;
+		position: relative;
+		&:after{
+			content: " ";
+			position: absolute;
+			display: block;
+			bottom: 10px;
+			width: 100%;
+			border-bottom: 10px solid #ff6a72;
+			z-index: 99;
+		}
+		.container{
+			position: relative;
+			min-height: $bannerHeight;
+			&:after{
+				content: " ";
+				position: absolute;
+				display: block;
+				width: 438px;
+				height: 414px;
+				background-image: url('../images/banner_overlay.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				bottom: -60px;
+				right: 0px;
+				z-index: 999;
+			}
+		}
+		h2{
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			margin-bottom: 50px;
+			&:after{
+				content: " ";
+				position: absolute;
+				display: block;
+				bottom: -15px;
+				left: 0px;
+				width: 75px;
+				border-bottom: 5px solid #ff6a72;
+			}
+			img{
+				width: 590px;
+				height: auto;
+			}
+		}
+		h3{
+			margin: 0px;
+			color: #FFF;
+			font-size: 32px;
+			font-weight: normal;
+			font-family: $fontDefault;
+		}
+	}
+	.main-content{
+		background-color: $primaryColor;
+		min-height: 850px;
+		position: relative;
+		background-image: url('../images/bg_overlay_bot.png');
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+		padding: 35px 0px;
+		z-index: 1;
+		&:before{
+			content: " ";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 50vw;
+			min-height: 50%;
+			background-image: url('../images/bg_overlay_top.png');
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: contain;
+			top: 0px;
+			left: 0px;
+			z-index: 1;
+		}
+	}
+	.details-section{
+		display: none;
+		@include clearfloat;
+		position: relative;
+		z-index: 2;
+		.main{
+			float: left;
+			width: 650px;
+			.prodName{
+				min-height: 100px;
+				padding: 20px;
+				line-height: 1.3em;
+				margin: 0px 0px 30px;
+				font-size: 22px;
+				font-weight: bold;
+				font-family: $fontDefault;
+				// background-color: #181818;
+				background-image: url('../images/bg_overlay_side.png');
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+			}
+			.gallery{
+				@include clearfloat;
+				.thumbs{
+					float: left;
+				}
+				.main-img{
+					float: right;
+					width: 500px;
+					overflow-x: hidden;
+					margin-right: 30px;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				.eachThumb{
+					display: block;
+					margin: 1px 1px 9px;
+					width: 50px;
+					height: 50px;
+					background-color: #FFF;
+					overflow: hidden;
+					border: 1px solid transparent;
+					&:hover, &.active{
+						border: 1px solid red;
+					}
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		.side{
+			float: right;
+			width: $conWidth - 650px - 22px;
+			.price-box{
+				background-image: url('../images/bg_overlay_side.png');
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+				padding: 30px;
+				margin-bottom: 3px;
+				p{
+					margin: 0px;
+					display: block;
+					sup{
+						top: -0.25em;
+					}
+				}
+				.price{
+					font-size: 60px;
+					color: #d02831;
+					font-family: $fontDefault;
+					font-weight: bold;
+					line-height: 1em;
+					margin-bottom: 20px;
+				}
+				.lprice{
+					font-size: 18px;
+					font-family: $fontDefault;
+					font-weight: bold;
+					span{
+						text-decoration: line-through;
+					}
+				}
+				.disc{
+					font-size: 18px;
+					font-family: $fontDefault;
+					font-weight: bold;
+					margin-bottom: 20px;
+					span{
+						color: #d02831;
+					}
+				}
+				.avail{
+					font-size: 20px;
+					font-family: $fontDefault;
+					font-weight: normal;
+				}
+			}
+			.call-info{
+				background-color: #d02831;
+				background-image: url("../images/call_ico.png");
+				background-repeat: no-repeat;
+				background-position: top left;
+				background-size: contain;
+				font-size: 17px;
+				font-family: $fontDefault;
+				font-weight: bold;
+				padding: 25px 15px 25px 75px;
+				text-transform: uppercase;
+			}
+			.notes{
+				font-size: 18px;
+				font-family: $fontDefault;
+				line-height: 1.5em;
+			}
+		}
+	}
+	.prod-listing{
+		margin: 30px 0px 50px;
+		.each-row{
+			@include clearfloat;
+			border-bottom: 1px solid #1c1c1c;
+			&:last-child{
+				border-bottom: none;
+			}
+			.each-col{
+				float: left;
+				width: ($conWidth * 0.25) - 46px;
+				text-align: center;
+				border-right: 1px solid #1c1c1c;
+				padding: 10px 20px 0px;
+				margin: 15px 0px;
+				&:last-child{
+					float: right;
+					border-right: none;
+				}
+				.prodName{
+					font-size: 12px;
+					font-family: $fontDefault;
+					font-weight: bold;
+				}
+				.prodImg{
+					width: 175px;
+					height: 175px;
+					@include css3(border-radius, 100px);
+					border: 10px solid #272727;
+					overflow: hidden;
+					margin-bottom: 15px;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				.pricing{
+					sup{
+						top: -0.25em;
+					}
+					.save{
+						margin-top: 0px;
+						font-size: 12px;
+						font-family: $fontDefault;
+						font-weight: bold;
+						margin-bottom: 10px;
+						line-height: 1em;
+						span{
+							color: #d02831;
+						}
+					}
+					.price{
+						line-height: 1em;
+						font-size: 32px;
+						font-family: $fontDefault;
+						font-weight: bold;
+						color: #d02831;
+						margin-bottom: 20px;
+						margin-top: 0px;
+						position: relative;
+						sup{
+							font-size: 0.5em;
+							top: -0.3em;
+							line-height: 32px;
+							vertical-align: top;
+						}
+					}
+					.partNo{
+						line-height: 1em;
+						margin: 0px;
+						font-size: 10px;
+						font-family: $fontDefault;
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+	.footnote{
+		padding-bottom: 30px;
+		p{
+			color: #FFF;
+			font-size: 18px;
+			font-family: $fontDefault;
+			font-weight: normal;
+			margin-bottom: 30px;
+			line-height: 1.3em;
+			text-shadow: 1px 2px 5px #000;
+			&.sign{
+				font-weight: bold;
+				font-size: 30px;
+			}
+		}
+	}
+	.prod-slider{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		h2{
+			font-size: 24px;
+			font-family: $fontDefault;
+			font-weight: normal;
+			margin: 0px;
+			margin-bottom: 30px;
+		}
+		.prodImg{
+			@include css3(border-radius, 100px);
+			border: 10px solid #272727;
+			overflow: hidden;
+			margin: 0px auto;
+			text-align: center;
+			width: 120px;
+			height: 120px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons .owl-prev{
+			background-image: url('../images/arr_left.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			opacity: 1;
+			left: -45px;
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons .owl-next{
+			background-image: url('../images/arr_right.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			opacity: 1;
+			right: -45px;
+		}
+		.owl-carousel.owl-theme .owl-controls .owl-buttons{
+			top: 30%;
+			padding: 0px 0px;
+		}
+	}
+}
