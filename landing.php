@@ -32,7 +32,7 @@
 			<div class="pricing">
 				<p class="save">$899<sup>99</sup> &rsaquo; <span>Save $200</span></p>
 				<p class="price">$699<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13810041</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -49,7 +49,7 @@
 			<div class="pricing">
 				<p class="save">$149<sup>99</sup> &rsaquo; <span>Save $20</span></p>
 				<p class="price">$129<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13382163</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -66,7 +66,7 @@
 			<div class="pricing">
 				<p class="save">$109<sup>99</sup> &rsaquo; <span>Save $33</span></p>
 				<p class="price">$76<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13816882</p>
 			</div>
 		</div>
 	</div>
@@ -85,7 +85,7 @@
 			<div class="pricing">
 				<p class="save">$149<sup>99</sup> &rsaquo; <span>Save $50</span></p>
 				<p class="price">$99<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13756489</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -102,7 +102,7 @@
 			<div class="pricing">
 				<p class="save">$429<sup>99</sup> &rsaquo; <span>Save $58</span></p>
 				<p class="price">$371<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13787937</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -119,7 +119,7 @@
 			<div class="pricing">
 				<p class="save">$429<sup>99</sup> &rsaquo; <span>Save $100</span></p>
 				<p class="price">$329<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13685097</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -136,7 +136,7 @@
 			<div class="pricing">
 				<p class="save">$1,199<sup>99</sup> &rsaquo; <span>Save $400</span></p>
 				<p class="price">$799<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13184749</p>
 			</div>
 		</div>
 	</div>
@@ -155,7 +155,7 @@
 			<div class="pricing">
 				<p class="save">$899<sup>99</sup> &rsaquo; <span>Save $200</span></p>
 				<p class="price">$699<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13848731</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -172,7 +172,7 @@
 			<div class="pricing">
 				<p class="save">$649<sup>99</sup> &rsaquo; <span>Save $121</span></p>
 				<p class="price">$529<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13848732</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -189,7 +189,7 @@
 			<div class="pricing">
 				<p class="save">$1,499<sup>99</sup> &rsaquo; <span>Save $159</span></p>
 				<p class="price">$120</p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13575801</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -206,7 +206,7 @@
 			<div class="pricing">
 				<p class="save">$1,499<sup>99</sup> &rsaquo; <span>Save $159</span></p>
 				<p class="price">$1,459<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13405392</p>
 			</div>
 		</div>
 	</div>
@@ -225,7 +225,7 @@
 			<div class="pricing">
 				<p class="save">$1,499<sup>99</sup> &rsaquo; <span>Save $159</span></p>
 				<p class="price">$1,014<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13405359</p>
 			</div>
 		</div>
 		<div class="each-col">
@@ -242,7 +242,7 @@
 			<div class="pricing">
 				<p class="save">$1,499<sup>99</sup> &rsaquo; <span>Save $159</span></p>
 				<p class="price">$949<sup>99</sup></p>
-				<p class="partNo">Part # 13238735</p>
+				<p class="partNo">Part # 13405387</p>
 			</div>
 		</div>
 	</div>
