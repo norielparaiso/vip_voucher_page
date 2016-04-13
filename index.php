@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="//pcm.com/mall/widgetti/images/trackingScripts/pcmall.ico">
 	<script src="pcm_assets/jquery-1.11.0.min.js"></script>
 	<script src="pcm_assets/modernizr3.js"></script>
+	<script src="//www.pcm.com/assets/jquery/plugins/trunk8.js"></script>
 
 	<!-- add these required resources -->
 	<link rel="stylesheet" href="css/pcm_vip_voucher.css">

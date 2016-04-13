@@ -7,7 +7,10 @@ PCM.vipVoucherScript = (function($) {
 			mainImg.attr("src", "http://www.pcm.com/widgets/pdp/images/no-image-available.jpg");
 		});
 
-		
+		$('.vip-page-container .prod-listing .each-row .each-col .prodName a').trunk8({
+			lines: 2,
+			tooltip: true
+		});
 	};
 
 	// Read a page's GET URL variables and return them as an associative array.
