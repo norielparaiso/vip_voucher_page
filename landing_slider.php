@@ -4,47 +4,42 @@
 	<div class="slider">
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog1.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog2.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog3.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog4.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog5.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog6.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog1.jpg" alt="">
 			</div>
 		</div>
 		<div class="slide">
 			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
-			</div>
-		</div>
-		<div class="slide">
-			<div class="prodImg">
-				<img src="http://i2.cc-inc.com/prod/13238000/13238735_lg_0.jpg" alt="">
+				<img src="http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/dog2.jpg" alt="">
 			</div>
 		</div>
 	</div>
