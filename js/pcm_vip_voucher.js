@@ -1,6 +1,6 @@
 var PCM = PCM || {};
 
-PCM.vipVoucherScript = function() {
+PCM.vipVoucherScript = (function($) {
 	var _uiFix = function(){
 		$('.vip-page-container img').attr('draggable','false');
 		$('.details-section .gallery img').error(function(){
@@ -286,22 +286,21 @@ PCM.vipVoucherScript = function() {
 		detailsPage: populateDetails,
 		carousel: _carousel
 	};
-}
+})(jQuery);
 
-$(function() {
-	$(document).ready(function(){
-		PCM.vipVoucherScript().detailsPage({
-			container: ".details-section",
-			prodName: ".details-section .prodName",
-			thumbnails: ".details-section .thumbs",
-			mainImg: ".details-section .main-img",
-			price:  ".details-section .price",
-			listPrice:  ".details-section .lprice span",
-			discount:  ".details-section .disc span"
-		});
 
-		PCM.vipVoucherScript().carousel(".prod-slider .slider");
-
-		PCM.vipVoucherScript().uiFix();
+jQuery(document).ready(function() {
+	PCM.vipVoucherScript.detailsPage({
+		container: ".details-section",
+		prodName: ".details-section .prodName",
+		thumbnails: ".details-section .thumbs",
+		mainImg: ".details-section .main-img",
+		price:  ".details-section .price",
+		listPrice:  ".details-section .lprice span",
+		discount:  ".details-section .disc span"
 	});
+
+	PCM.vipVoucherScript.carousel(".prod-slider .slider");
+
+	PCM.vipVoucherScript.uiFix();
 });
