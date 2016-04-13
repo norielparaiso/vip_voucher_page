@@ -6,6 +6,8 @@ PCM.vipVoucherScript = function() {
 		$('.details-section .gallery img').error(function(){
 			mainImg.attr("src", "http://www.pcm.com/widgets/pdp/images/no-image-available.jpg");
 		});
+
+		
 	};
 
 	// Read a page's GET URL variables and return them as an associative array.

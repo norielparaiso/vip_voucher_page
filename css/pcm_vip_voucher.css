@@ -1014,7 +1014,7 @@ body {
   background-size: contain;
   bottom: -60px;
   right: 0px;
-  z-index: 999;
+  z-index: 200;
 }
 .vip-page-container .banner h2 {
   margin: 0px;
@@ -1225,6 +1225,7 @@ body {
   font-size: 12px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: bold;
+  height:60px;
 }
 .vip-page-container .prod-listing .each-row .each-col .prodImg {
   width: 175px;

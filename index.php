@@ -13,7 +13,9 @@
 	<!-- add these required resources -->
 	<link rel="stylesheet" href="css/pcm_vip_voucher.css">
 	<script src="js/owl.carousel.v1.3.2.js"></script>
+	<script src="http://cdn-us-ec.yottaa.net/514ca26f86305e53b20000a5/www.pcm.com/v~12.605/ttsvr/mall/frameworks/jquery/trunk8.js"></script>
 	<script src="js/pcm_vip_voucher.js"></script>
+
 </head>
 <body>
 	<!-- start tooltwist export here -->
