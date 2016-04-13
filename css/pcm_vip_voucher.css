@@ -1094,6 +1094,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  color: #ffffff;
 }
 .vip-page-container .details-section .main .gallery:after {
   content: "";
@@ -1156,19 +1157,32 @@ body {
   line-height: 1em;
   margin-bottom: 20px;
 }
+.vip-page-container .details-section .side .price-box .price sup{
+  color: #d02831;
+  font-size: 60%;
+  top: -0.5em;
+}
 .vip-page-container .details-section .side .price-box .lprice {
   font-size: 18px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: bold;
+  color: #ffffff;
 }
 .vip-page-container .details-section .side .price-box .lprice span {
+  color: #ffffff;
   text-decoration: line-through;
+}
+.vip-page-container .details-section .side .price-box .lprice span sup{
+  color: #ffffff;
+  font-size: 60%;
+  top: -0.5em;
 }
 .vip-page-container .details-section .side .price-box .disc {
   font-size: 18px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .vip-page-container .details-section .side .price-box .disc span {
   color: #d02831;
@@ -1177,6 +1191,7 @@ body {
   font-size: 20px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  color: #ffffff;
 }
 .vip-page-container .details-section .side .call-info {
   background-color: #d02831;
@@ -1189,11 +1204,15 @@ body {
   font-weight: bold;
   padding: 25px 15px 25px 75px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 .vip-page-container .details-section .side .notes {
   font-size: 18px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
+  padding-top: 15px;
+  color: #ffffff;
+
 }
 .vip-page-container .prod-listing {
   margin: 30px 0px 50px;
@@ -1217,9 +1236,13 @@ body {
   padding: 10px 20px 0px;
   margin: 15px 0px;
 }
+
 .vip-page-container .prod-listing .each-row .each-col:last-child {
   float: right;
   border-right: none;
+}
+.vip-page-container .prod-listing .each-row .each-col.force-left {
+  float: left;
 }
 .vip-page-container .prod-listing .each-row .each-col .prodName {
   font-size: 12px;
@@ -1349,4 +1372,72 @@ body {
   padding: 0px 0px;
 }
 
+
+/**/
+
+.vip-page-container .prod-listing .each-row .each-col .prodName, 
+.vip-page-container .prod-listing .each-row .each-col .pricing .partNo,
+.vip-page-container .prod-listing .each-row .each-col .pricing .save,
+.vip-page-container .prod-listing .each-row .each-col .pricing .save sup{
+    color: #ffffff;
+}
+
+.vip-page-container .prod-listing .each-row .each-col .pricing .price sup{
+color: #d02831;
+}
+
+.vip-page-container .prod-slider h2{
+  color: #ffffff;
+}
+
+.vip-page-container .prod-listing .each-row .each-col .pricing sup{
+  font-size:90%;
+}
+
+.vip-page-container .prod-listing .each-row .each-col{
+  position: relative;
+  z-index: 3;
+}
+.vip-page-container .prod-listing .each-row .each-col .prodName{
+  overflow-y: hidden;
+}
+.vip-page-container .prod-listing .each-row .each-col .prodName a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.vip-page-container .prod-listing .each-row .each-col{
+  padding-bottom: 10px;
+}
+.vip-page-container .prod-listing .each-row .each-col:last-child{
+  float: left;
+}
+.vip-page-container .prod-listing .each-row .each-col .prodName a:hover{
+  outline: none;
+  text-decoration: none;
+  color: #d02831;
+}
+.vip-page-container .prod-listing .each-row .each-col .prodImg{
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.vip-page-container .prod-listing .each-row .each-col:hover{
+  background-image: url("http://i2.cc-inc.com/fejt-assets/cache/pcm/pcm_vip_voucher_page/images/bg_overlay_top.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.vip-page-container .prod-listing .each-row .each-col:hover .prodImg{
+  border-color: #d02831;
+}
 

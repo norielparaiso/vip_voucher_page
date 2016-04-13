@@ -150,7 +150,7 @@
 				<p class="partNo">Part # 13238735</p>
 			</div>
 		</div>
-		<div class="each-col">
+		<div class="each-col force-left">
 			<h3 class="prodName">HP Inc. Elite x2 1011 G1 - Tablet - with keyboard dock - Core M 5Y10c / 800 MHz - Win 8.1 Pro 64-bit - 4 GB RAM - 128 GB SSD - 11.6" IPS touchscreen 1920 x 1080 ( Full HD )</h3>
 			<div class="prodImg">
 				<img src="http://i2.cc-inc.com/prod/13238000/13405387_xxlg_0.jpg" alt="">
