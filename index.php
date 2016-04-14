@@ -24,7 +24,7 @@
 		<div class="banner">
 			<div class="container">
 				<h2><img src="images/title_banner.png" alt="It's a Match"></h2>
-				<h3>We knew you loved us too!</h3>
+				<h3>We Knew You Loved Us Too!</h3>
 			</div>
 		</div>
 		<div class="main-content">
