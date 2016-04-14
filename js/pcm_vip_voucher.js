@@ -7,11 +7,30 @@ PCM.vipVoucherScript = (function($) {
 			mainImg.attr("src", "http://www.pcm.com/widgets/pdp/images/no-image-available.jpg");
 		});
 
-		$('.vip-page-container .prod-listing .each-row .each-col .prodName a').trunk8({
-			lines: 2,
-			tooltip: true
-		});
+		setTimeout(function(){
+			$('.vip-page-container .prod-listing .each-row .each-col .prodName a').trunk8({
+				lines: 2,
+				tooltip: true
+			});
+			if($('.each-row').last().find(".each-col").length < 4){
+				var inner = 0, marginLeft;
+				$('.each-row').last().find(".each-col").each(function(){
+					inner += $(this).outerWidth();
+				});
+				marginLeft = ($('.each-row').last().width() - inner) * 0.5;
+				$('.each-row').last().css('margin-left',marginLeft);
+			}
+		},1000);
 	};
+
+	// strip url('') and return just the source
+	var getBgURL = function(el){
+		var bg_url = el.css("background-image");
+		bg_url = /^url\((['"]?)(.*)\1\)$/.exec(bg_url);
+		bg_url = bg_url ? bg_url[2] : "";
+
+		return bg_url;
+	}
 
 	// Read a page's GET URL variables and return them as an associative array.
 	var getUrlVars = function(){
@@ -28,7 +47,7 @@ PCM.vipVoucherScript = (function($) {
 	// attach thumbnail events
 	var gallery = function(elem, mainImg){
 		$(elem).wrap('<a class="eachThumb" href="#"></a>');
-		mainImg.append("<img/>");
+		mainImg.html("<img/>");
 		mainImg = mainImg.find('img');
 		mainImg.error(function(){
 			mainImg.attr("src", "http://www.pcm.com/widgets/pdp/images/no-image-available.jpg");
@@ -50,6 +69,51 @@ PCM.vipVoucherScript = (function($) {
 		$('.eachThumb').first().trigger('click');
 	};
 
+	// populate landing page based on the dynamic widget supplied if existing
+	var populateListing = function(param){
+		var source = $(param.dynamicCon),
+			mainCon = $(param.displayCon);
+
+		if(source.length > 0){
+			var itemPerRow = 4, ctr = 1, thisRow;
+			source.find(".productItemBox").each(function(){
+				var thisItem = $(this),
+					item_sku = thisItem.find(".pcmdpno").text().substring(11), //assuming text like "PCM Part # 13405359"
+					item_url = (mainCon.attr("data-action") + item_sku).
+					item_name = thisItem.find(".itemName a").html().replace('Inc.','').replace('Smart Buy','');
+				if(ctr == 1){
+					mainCon.append("<div class='each-row'></div>");
+					thisRow = mainCon.find('.each-row').last();
+				}
+				htmlStr = " <div class='each-col'>"+
+						  " 	<h3 class='prodName'>" +
+						  " 		<a href='"+ item_url +"'>" +
+										 item_name +
+						  " 		</a>" +
+						  " 	</h3>" +
+						  " 	<div class='prodImg'>" +
+						  " 		<a href='"+item_url+"'>" +
+						  " 			<img src='"+getBgURL(thisItem.find(".itemImg"))+"' alt=''>" +
+						  " 		</a>" +
+						  " 	</div>" +
+						  " 	<div class='pricing'>" +
+						  " 		<p class='price'>"+thisItem.find(".finalPrice").text().replace('.00','.').replace('.','<sup>')+"</sup></p>" +
+						  " 		<p class='partNo'>Part # "+item_sku+"</p>" +
+						  " 	</div>" +
+						  " </div>";
+
+				thisRow.append(htmlStr);
+
+				if(ctr == itemPerRow){
+					ctr = 1;
+				}else{
+					ctr++;
+				}
+			});
+			source.remove();
+		}
+	};
+
 	// populate details page based on SKU; add events after
 	var populateDetails = function(param){
 		var container = $(param.container),
@@ -57,6 +121,7 @@ PCM.vipVoucherScript = (function($) {
 			thumbnails = $(param.thumbnails),
 			mainImg = $(param.mainImg),
 			price = $(param.price),
+			source = $(param.dynamicCon),
 			listPrice = $(param.listPrice),
 			discount = $(param.discount),
 			SKU = (getUrlVars()["sku"]),
@@ -249,15 +314,23 @@ PCM.vipVoucherScript = (function($) {
 					break;
 			}
 			if(isValid){
+				if(source.length > 0){
+					thisItem = source.find(".pcmdpno:contains('"+SKU+"')").closest('.productItemBox');
+					if(thisItem.length > 0){
+						val_prodName = thisItem.find(".itemName").find("a").html().replace('Inc.','').replace('Smart Buy','');
+						val_price = thisItem.find(".finalPrice").text().replace('.00','.').replace('.','<sup>')+"</sup>";
+					}
+				}
 				// start appending
-				prodName.append(val_prodName);
-				thumbnails.append(val_thumbnails);
-				price.append(val_price);
-				listPrice.append(val_listPrice);
-				discount.append(val_discount);
+				prodName.html(val_prodName);
+				thumbnails.html(val_thumbnails);
+				price.html(val_price);
+				listPrice.html(val_listPrice);
+				discount.html(val_discount);
 
 				gallery(".thumb",mainImg);
 			}
+			source.remove();
 			container.show();
 		}
 	};
@@ -280,14 +353,15 @@ PCM.vipVoucherScript = (function($) {
 				responsive: false,
 				responsiveRefreshRate: 200,
 				autoHeight: false,
-				mouseDrag: true,
-				touchDrag: true
+				mouseDrag: false,
+				touchDrag: false
 			});
 		}
 	};
 
 	return {
 		uiFix: _uiFix,
+		landingPage: populateListing,
 		detailsPage: populateDetails,
 		carousel: _carousel
 	};
@@ -295,6 +369,11 @@ PCM.vipVoucherScript = (function($) {
 
 
 jQuery(document).ready(function() {
+	PCM.vipVoucherScript.landingPage({
+		dynamicCon : ".dynamic_skus_landing",
+		displayCon : ".prod-listing"
+	});
+
 	PCM.vipVoucherScript.detailsPage({
 		container: ".details-section",
 		prodName: ".details-section .prodName",
@@ -302,7 +381,8 @@ jQuery(document).ready(function() {
 		mainImg: ".details-section .main-img",
 		price:  ".details-section .price",
 		listPrice:  ".details-section .lprice span",
-		discount:  ".details-section .disc span"
+		discount:  ".details-section .disc span",
+		dynamicCon : ".dynamic_skus_details"
 	});
 
 	PCM.vipVoucherScript.carousel(".prod-slider .slider");
