@@ -1,6 +1,6 @@
 <!-- Main landing page slider start -->
 <div class="container prod-slider">
-	<h2>Check out our dog pics below to see which one is best for you!</h2>
+	<h2>Check out our cute dog pics as well! </h2>
 	<div class="slider">
 		<div class="slide">
 			<div class="prodImg">

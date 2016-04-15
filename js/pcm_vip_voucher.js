@@ -79,7 +79,7 @@ PCM.vipVoucherScript = (function($) {
 			source.find(".productItemBox").each(function(){
 				var thisItem = $(this),
 					item_sku = thisItem.find(".pcmdpno").text().substring(11), //assuming text like "PCM Part # 13405359"
-					item_url = (mainCon.attr("data-action") + item_sku).
+					item_url = (mainCon.attr("data-action") + item_sku),
 					item_name = thisItem.find(".itemName a").html().replace('Inc.','').replace('Smart Buy','');
 				if(ctr == 1){
 					mainCon.append("<div class='each-row'></div>");

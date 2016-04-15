@@ -237,7 +237,7 @@
 </div>
 <div class="footnote">
 	<p>We&rsquo;re so glad that we&rsquo;ve made up, aren&rsquo;t you? Let&rsquo;s talk today - we&rsquo;ve missed your voice. Call your DATE (Dedicated Account Technical Executive, no...we didn't make you an eHarmony)... to make plans for the future – we like thinking long-term when it comes to you! </p>
-	<p>Don&rsquo;t worry, we didn&rsquo;t give you a fake number. We&rsquo;ve already emailed it to you – check that love note of ours for your DATE&rsquo;s number. </p>
+	<p>Don&rsquo;t worry, we didn&rsquo;t give you a fake number. We&rsquo;ve already emailed it to you – check that love note of ours for your DATE&rsquo;s number. Some DATEs say they miss you with a box of chocolates or a bouquet of flowers, we prefer to do it with technology. Call today and see what your well-deserved &rsquo;I Miss You&rsquo; gift is.</p>
 	<p class="sign">
 		XOXO, PCM
 	</p>
